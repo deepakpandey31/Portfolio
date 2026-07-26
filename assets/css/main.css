@@ -10112,49 +10112,56 @@ body.tw-magic-cursor #magic-cursor {
 
   /* Hero / Banner Section Fixes */
   .banner-three-area {
-    padding-block: 100px 40px !important;
+    padding-block: 80px 40px !important;
     overflow: hidden;
   }
   .banner-three-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .banner-three-man {
-    position: absolute !important;
-    top: 45px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: 96vw !important;
-    max-width: 580px !important;
-    margin: 0 !important;
-    z-index: 0 !important;
-  }
-  .banner-three-man img {
-    transform: scale(1.28) !important;
-    transform-origin: top center !important;
-    max-height: 560px !important;
-    width: 100% !important;
-    object-fit: contain !important;
-    margin: 0 auto;
-    display: block;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
   .banner-three-title {
+    order: 1 !important;
     font-size: clamp(2.6rem, 12vw, 5.5rem) !important;
     line-height: 1.05 !important;
-    margin-bottom: 25px !important;
+    margin-bottom: 15px !important;
     text-align: center;
     word-break: break-word;
     position: relative !important;
     z-index: 1 !important;
   }
+  .banner-three-man {
+    order: 2 !important;
+    position: relative !important;
+    top: 0 !important;
+    left: auto !important;
+    transform: none !important;
+    width: 96vw !important;
+    max-width: 540px !important;
+    margin: 10px auto 25px auto !important;
+    z-index: 1 !important;
+    text-align: center;
+  }
+  .banner-three-man img {
+    transform: scale(1.05) !important;
+    transform-origin: center center !important;
+    max-height: 520px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    margin: 0 auto;
+    display: block;
+  }
   .banner-three-wrap {
+    order: 3 !important;
+    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     width: 100% !important;
-    gap: 25px;
+    gap: 25px !important;
+    margin-top: 10px !important;
   }
   .banner-three-left {
+    order: 1 !important;
     display: block !important;
     max-width: 100% !important;
     width: 100% !important;
@@ -10174,6 +10181,7 @@ body.tw-magic-cursor #magic-cursor {
     font-size: 0.95rem !important;
   }
   .banner-three-center {
+    order: 2 !important;
     width: 100% !important;
     margin: 0 !important;
   }
@@ -10183,6 +10191,7 @@ body.tw-magic-cursor #magic-cursor {
     line-height: 1.3 !important;
   }
   .banner-three-right {
+    order: 3 !important;
     display: block !important;
     max-width: 100% !important;
     width: 100% !important;
@@ -10425,16 +10434,16 @@ body.tw-magic-cursor #magic-cursor {
 
 @media screen and (max-width: 575px) {
   .banner-three-area {
-    padding-block: 90px 30px !important;
+    padding-block: 70px 25px !important;
   }
   .banner-three-man {
-    top: 35px !important;
     width: 98vw !important;
-    max-width: 520px !important;
+    max-width: 460px !important;
+    margin: 5px auto 20px auto !important;
   }
   .banner-three-man img {
-    max-height: 480px !important;
-    transform: scale(1.25) !important;
+    max-height: 440px !important;
+    transform: scale(1.05) !important;
   }
   .banner-three-title {
     font-size: clamp(2.2rem, 11vw, 3.8rem) !important;
@@ -10452,13 +10461,13 @@ body.tw-magic-cursor #magic-cursor {
 
 @media screen and (max-width: 375px) {
   .banner-three-man {
-    top: 25px !important;
     width: 100vw !important;
-    max-width: 440px !important;
+    max-width: 380px !important;
+    margin: 5px auto 15px auto !important;
   }
   .banner-three-man img {
-    max-height: 420px !important;
-    transform: scale(1.2) !important;
+    max-height: 380px !important;
+    transform: scale(1) !important;
   }
   .banner-three-title {
     font-size: clamp(1.9rem, 10vw, 3rem) !important;
