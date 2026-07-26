@@ -10070,4 +10070,343 @@ body.tw-magic-cursor #magic-cursor {
   }
 }
 
+/* ==========================================================================
+   Mobile Responsiveness Enhancements (max-width: 991px)
+   Does NOT affect desktop/laptop layouts (>= 992px)
+   ========================================================================== */
+
+@media screen and (max-width: 991px) {
+  /* Global Mobile Overflow Fixes */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+  #smooth-wrapper, #smooth-content {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+  .container, .tw-container-1800-px {
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  img {
+    max-width: 100% !important;
+  }
+
+  /* Header & Navigation Fixes */
+  .header-three {
+    padding-block: 12px;
+  }
+  .header-three-logo {
+    padding: 8px 14px;
+  }
+  .tw-offcanvas-2-wrapper {
+    padding: 20px 15px;
+  }
+  .tw-main-menu-mobile nav ul li a {
+    font-size: clamp(1.4rem, 5vw, 2.2rem) !important;
+  }
+
+  /* Hero / Banner Section Fixes */
+  .banner-three-area {
+    padding-block: 100px 40px !important;
+    overflow: hidden;
+  }
+  .banner-three-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-three-man {
+    position: relative !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto 20px auto !important;
+    z-index: 1 !important;
+  }
+  .banner-three-man img {
+    transform: scale(1) !important;
+    max-height: 380px !important;
+    width: auto !important;
+    margin: 0 auto;
+    display: block;
+  }
+  .banner-three-title {
+    font-size: clamp(2.4rem, 11vw, 5rem) !important;
+    line-height: 1.05 !important;
+    margin-bottom: 20px !important;
+    text-align: center;
+    word-break: break-word;
+  }
+  .banner-three-wrap {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 25px;
+  }
+  .banner-three-left {
+    display: block !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-block-end: 0 !important;
+    padding: 24px 20px !important;
+    text-align: center;
+  }
+  .banner-three-left-title {
+    font-size: clamp(1.1rem, 4vw, 1.5rem) !important;
+    margin-bottom: 15px !important;
+  }
+  .banner-three-list {
+    max-width: 100% !important;
+  }
+  .banner-three-list ul li {
+    text-align: left;
+    font-size: 0.95rem !important;
+  }
+  .banner-three-center {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .banner-three-center-title {
+    font-size: clamp(1.15rem, 4vw, 1.6rem) !important;
+    max-width: 100% !important;
+    line-height: 1.3 !important;
+  }
+  .banner-three-right {
+    display: block !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-block-end: 0 !important;
+    padding: 20px !important;
+  }
+  .banner-three-counter-item {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-bottom: 15px !important;
+  }
+  .banner-three-counter-item:nth-child(2) {
+    margin-block-start: 0 !important;
+  }
+  .banner-three-counter-title {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+  }
+
+  /* About Section Fixes */
+  .about-three-area {
+    padding-block: 60px 40px !important;
+  }
+  .about-three-title {
+    font-size: clamp(1.25rem, 4.5vw, 1.85rem) !important;
+    line-height: 1.35 !important;
+  }
+  .about-three-thumb {
+    margin-bottom: 25px !important;
+  }
+  .about-three-thumb img {
+    max-height: 400px !important;
+  }
+  .custom-bio-scroll {
+    max-height: 380px !important;
+    padding-right: 8px !important;
+  }
+  .custom-bio-scroll p {
+    font-size: 0.95rem !important;
+    margin-bottom: 14px !important;
+  }
+  .about-three-wrap-shape {
+    position: relative !important;
+    top: 0 !important;
+    margin-top: 30px !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    width: 100% !important;
+  }
+
+  /* Marquee Section Fixes */
+  .marquee {
+    overflow: hidden !important;
+  }
+  .marquee-two-title, .marquee-three-title {
+    font-size: clamp(2.2rem, 8vw, 4.5rem) !important;
+  }
+  .js-marquee-wrapper, .js-marquee {
+    gap: 25px !important;
+  }
+
+  /* Hackathons Section Fixes */
+  .service-three-area {
+    padding-block: 60px 40px !important;
+  }
+  .service-three-single {
+    margin-bottom: 20px !important;
+    width: 100% !important;
+  }
+  .service-three-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+    padding: 20px 16px !important;
+  }
+  .service-three-content {
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+  .service-three-title {
+    font-size: clamp(1.3rem, 4.5vw, 1.8rem) !important;
+  }
+  .service-three-thumb {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .service-three-thumb img {
+    max-height: 200px !important;
+    width: 100% !important;
+  }
+  .portfolio-list ul {
+    gap: 8px !important;
+  }
+  .portfolio-list ul li a {
+    padding: 4px 12px 4px 28px !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* Projects Section Fixes */
+  .portfolio-three-area {
+    padding-block: 60px 40px !important;
+  }
+  .portfolio-three-shape-title {
+    font-size: clamp(3.5rem, 15vw, 8rem) !important;
+    overflow: hidden !important;
+    max-width: 100vw !important;
+  }
+  .portfolio-three-item {
+    margin-bottom: 30px !important;
+    width: 100% !important;
+  }
+  .portfolio-thumb {
+    padding: 16px !important;
+  }
+  .portfolio-thumb p {
+    font-size: 0.92rem !important;
+  }
+
+  /* Certifications Section Fixes */
+  .feature-three-area {
+    padding-block: 60px 40px !important;
+  }
+  .feature-three-single {
+    margin-bottom: 15px !important;
+  }
+  .feature-three-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+  .feature-three-left {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .feature-three-text.tw-w-20,
+  .feature-three-text.tw-w-160-px {
+    width: auto !important;
+    display: block !important;
+    margin-bottom: 2px;
+  }
+  .feature-three-text {
+    font-size: clamp(1rem, 3.5vw, 1.3rem) !important;
+    word-break: break-word;
+  }
+  .hover__reveal-bg {
+    display: none !important;
+  }
+
+  /* Tech Stack Section Fixes */
+  .brand-three-area {
+    padding-block: 40px 40px !important;
+  }
+  .brand-three-title {
+    font-size: clamp(1.1rem, 4vw, 1.5rem) !important;
+  }
+
+  /* Contact & Footer Section Fixes */
+  .footer-three-area {
+    padding-block: 60px 20px !important;
+  }
+  .footer-three-top-left {
+    margin-inline-end: 0 !important;
+    margin-bottom: 40px !important;
+  }
+  .footer-three-top-info {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    padding: 20px 15px !important;
+    gap: 15px !important;
+  }
+  .footer-three-top-thumb {
+    width: 120px !important;
+    margin: 0 auto !important;
+  }
+  .footer-three-social ul {
+    justify-content: center !important;
+  }
+  .footer-three-form {
+    width: 100% !important;
+  }
+  .footer-three-border {
+    padding-inline: 0 !important;
+  }
+  .footer-three-middile {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    gap: 25px !important;
+  }
+  .footer-three-middile ul {
+    justify-content: center !important;
+  }
+  .footer-three-back-to-top {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 1.5rem !important;
+  }
+  .footer-three-bottom-title {
+    font-size: clamp(3rem, 15vw, 7rem) !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .banner-three-area {
+    padding-block: 90px 30px !important;
+  }
+  .banner-three-man {
+    max-width: 260px !important;
+  }
+  .banner-three-man img {
+    max-height: 300px !important;
+  }
+  .banner-three-title {
+    font-size: clamp(2rem, 10vw, 3.5rem) !important;
+  }
+  .banner-three-left, .banner-three-right {
+    padding: 16px !important;
+  }
+  .about-three-counter a {
+    padding: 12px 18px !important;
+    font-size: 0.85rem !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
