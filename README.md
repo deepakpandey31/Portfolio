@@ -4,7 +4,7 @@
 
 Hi there! 👋 Welcome to my personal portfolio repository. I am a B.Tech Computer Science student at Dr. Ambedkar Institute of Technology for Divyangjan (AITD), Kanpur (AKTU), passionate about software engineering, problem-solving, and building applications that make a real-world impact.
 
-🌐 **Live Deployed Portfolio**: [https://dp-portfolio-umber.vercel.app/](https://dp-portfolio-umber.vercel.app/)
+🌐 **Portfolio**: [https://dp-portfolio-umber.vercel.app/](https://dp-portfolio-umber.vercel.app/)
 
 ---
 
