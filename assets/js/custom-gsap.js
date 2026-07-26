@@ -681,34 +681,34 @@
     }
   });
 
-  // Contact Form Mail Inbox Redirection Handler
+  // Contact Form Mail Inbox Redirection Handler (Exact same subject & body on laptop and mobile)
   $(document).on("submit", "#portfolio-contact-form", function (e) {
     e.preventDefault();
     
+    var msg = $("#contact-message").val() ? $("#contact-message").val().trim() : "";
     var name = $("#contact-name").val() ? $("#contact-name").val().trim() : "";
     var email = $("#contact-email").val() ? $("#contact-email").val().trim() : "";
-    var msg = $("#contact-message").val() ? $("#contact-message").val().trim() : "";
+    
+    var fullBody = msg;
+    if (name || email) {
+      var details = [];
+      if (name) details.push("From: " + name);
+      if (email) details.push("Email: " + email);
+      fullBody = details.join(" | ") + "\n\n" + msg;
+    }
     
     var myEmail = "pandeydeepak312005@gmail.com";
-    var subjectStr = "Portfolio Contact: " + (name ? "Message from " + name : "New Message");
-    
-    var bodyLines = [];
-    if (name) bodyLines.push("Name: " + name);
-    if (email) bodyLines.push("Sender Email: " + email);
-    if (msg) bodyLines.push("\nMessage:\n" + msg);
-    var bodyStr = bodyLines.join("\n");
-    
-    var subject = encodeURIComponent(subjectStr);
-    var body = encodeURIComponent(bodyStr);
+    var subject = encodeURIComponent("want to connect");
+    var body = encodeURIComponent(fullBody);
     
     var mailtoUrl = "mailto:" + myEmail + "?subject=" + subject + "&body=" + body;
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 991;
     
     if (isMobile) {
-      // On mobile devices, redirect directly to Gmail App / native email app
+      // Direct Gmail app / native email redirect on mobile with exact same subject & body
       window.location.href = mailtoUrl;
     } else {
-      // On desktop devices, open Web Gmail in new tab and trigger mailto
+      // Desktop web Gmail compose in new tab + mailto fallback
       var gmailWebUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=" + myEmail + "&su=" + subject + "&body=" + body;
       window.open(gmailWebUrl, "_blank");
       setTimeout(function() {
