@@ -583,17 +583,18 @@
   ///////////////////////
   // 09. Hover Reveal
   const hoverItem = document.querySelectorAll(".hover__reveal-item");
-  function moveImage(e, hoverItem, index) {
-    const item = hoverItem.getBoundingClientRect();
-    const x = e.clientX - item.x;
-    const y = e.clientY - item.y;
-    if (hoverItem.children[index]) {
-      hoverItem.children[index].style.transform = `translate(${x}px, ${y}px)`;
+  function moveImage(e, item) {
+    const rect = item.getBoundingClientRect();
+    const x = e.clientX - rect.x;
+    const y = e.clientY - rect.y;
+    const bg = item.querySelector(".hover__reveal-bg");
+    if (bg) {
+      bg.style.transform = `translate(${x}px, ${y}px)`;
     }
   }
-  hoverItem.forEach((item, i) => {
+  hoverItem.forEach((item) => {
     item.addEventListener("mousemove", (e) => {
-      setInterval(moveImage(e, item, 1), 50);
+      moveImage(e, item);
     });
   });
 

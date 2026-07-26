@@ -54,6 +54,15 @@
         border-radius: 12px !important;
         margin: -165px 0 0 -240px !important;
       }
+            .hover__reveal-item:hover .hover__reveal-bg,
+      .hover__reveal-item:focus-within .hover__reveal-bg {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      .hover__reveal-bg {
+        pointer-events: none !important;
+        z-index: 999 !important;
+      }
       /* Autofill white text fix */
       input:-webkit-autofill,
       input:-webkit-autofill:hover, 
