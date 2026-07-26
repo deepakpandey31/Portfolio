@@ -48,6 +48,11 @@ Hi there! 👋 Welcome to my personal portfolio repository. I am a B.Tech Comput
 *AI-powered queue intelligence system eliminating waiting chaos in cafeterias & offices.*
 - Real-time digital token tickets, live queue analytics, role-based dashboards, and QR verification.
 
+### 5. 🚀 First Startup Venture *(Coming Soon)*
+*Currently founding and engineering my first startup solution from the ground up.*
+- In active stealth development focusing on high-impact tech solutions.
+- Core platform architecture, UI/UX, and MVP development in progress. Launching soon!
+
 ---
 
 ## 📜 Certifications
