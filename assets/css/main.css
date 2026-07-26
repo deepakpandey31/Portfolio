@@ -10125,7 +10125,7 @@ body.tw-magic-cursor #magic-cursor {
     order: 1 !important;
     font-size: clamp(2.6rem, 12vw, 5.5rem) !important;
     line-height: 1.05 !important;
-    margin-bottom: 15px !important;
+    margin-bottom: 5px !important;
     text-align: center !important;
     word-break: break-word;
     position: relative !important;
@@ -10140,9 +10140,9 @@ body.tw-magic-cursor #magic-cursor {
     right: auto !important;
     transform: none !important;
     width: 100% !important;
-    max-width: 480px !important;
+    max-width: 540px !important;
     height: auto !important;
-    margin: 15px auto 25px auto !important;
+    margin: -15px auto 20px auto !important;
     z-index: 2 !important;
     text-align: center !important;
     display: flex !important;
@@ -10152,8 +10152,9 @@ body.tw-magic-cursor #magic-cursor {
   .banner-three-man img {
     position: relative !important;
     z-index: 2 !important;
-    transform: none !important;
-    max-height: 480px !important;
+    transform: scale(1.1) !important;
+    transform-origin: center center !important;
+    max-height: 540px !important;
     width: auto !important;
     max-width: 100% !important;
     object-fit: contain !important;
@@ -10449,15 +10450,16 @@ body.tw-magic-cursor #magic-cursor {
   }
   .banner-three-man {
     width: 100% !important;
-    max-width: 400px !important;
-    margin: 10px auto 20px auto !important;
+    max-width: 460px !important;
+    margin: -15px auto 18px auto !important;
   }
   .banner-three-man img {
-    max-height: 400px !important;
-    transform: none !important;
+    max-height: 460px !important;
+    transform: scale(1.08) !important;
   }
   .banner-three-title {
     font-size: clamp(2.2rem, 11vw, 3.8rem) !important;
+    margin-bottom: 5px !important;
   }
   .banner-three-left, .banner-three-right {
     padding: 16px !important;
@@ -10473,12 +10475,12 @@ body.tw-magic-cursor #magic-cursor {
 @media screen and (max-width: 375px) {
   .banner-three-man {
     width: 100% !important;
-    max-width: 330px !important;
-    margin: 8px auto 15px auto !important;
+    max-width: 380px !important;
+    margin: -10px auto 15px auto !important;
   }
   .banner-three-man img {
-    max-height: 340px !important;
-    transform: none !important;
+    max-height: 380px !important;
+    transform: scale(1.05) !important;
   }
   .banner-three-title {
     font-size: clamp(1.9rem, 10vw, 3rem) !important;
