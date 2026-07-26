@@ -49,11 +49,10 @@
     gsap.config({
       nullTargetWarn: false,
     });
-    var isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || $(window).width() <= 991;
     smoother = ScrollSmoother.create({
-      smoothTouch: isMobileDevice ? 0 : 0.2,
-      smooth: isMobileDevice ? 0 : 4,
-      effects: !isMobileDevice,
+      smooth: 1.5,
+      effects: true,
+      smoothTouch: 0.1,
       normalizeScroll: false,
       ignoreMobileResize: true,
     });
