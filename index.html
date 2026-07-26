@@ -42,7 +42,7 @@
       .custom-bio-scroll::-webkit-scrollbar-thumb:hover {
         background: #d8451b;
       }
-      .hover__reveal-bg {
+            .hover__reveal-bg {
         width: 480px !important;
         height: 330px !important;
         background-size: contain !important;
@@ -53,9 +53,14 @@
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.75) !important;
         border-radius: 12px !important;
         margin: -165px 0 0 -240px !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        z-index: 999 !important;
+        transition: opacity 0.2s ease-out, visibility 0.2s ease-out !important;
       }
-            .hover__reveal-item:hover .hover__reveal-bg,
-      .hover__reveal-item:focus-within .hover__reveal-bg {
+      .hover__reveal-item:hover > .hover__reveal-bg,
+      .hover__reveal-item:focus-within > .hover__reveal-bg {
         opacity: 1 !important;
         visibility: visible !important;
       }
@@ -1150,7 +1155,7 @@
                 <div class="feature-three-wrapper hover__widget">
                   <!-- Cert 1 -->
                   <div
-                    class="feature-three-single current hover__reveal-item"
+                    class="feature-three-single hover__reveal-item"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="200"
