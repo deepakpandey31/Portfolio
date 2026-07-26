@@ -10383,6 +10383,25 @@ body.tw-magic-cursor #magic-cursor {
   .footer-three-bottom-title {
     font-size: clamp(3rem, 15vw, 7rem) !important;
   }
+
+  /* Decorative Shape Images - Hide on mobile to prevent layout shifts & overflow */
+  .banner-three-line-shape,
+  .about-three-shape,
+  .footer-three-area img[src*="footer-three-bg-shape"] {
+    display: none !important;
+  }
+
+  /* Touch Target Sizes (min 44px) */
+  .header-three-menu button,
+  .twoffcanvas__contact-info a,
+  .footer-three-social ul li a,
+  .tw-offcanvas-2-close-btn {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -10406,6 +10425,18 @@ body.tw-magic-cursor #magic-cursor {
     font-size: 0.85rem !important;
     width: 100% !important;
     justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .banner-three-man {
+    max-width: 220px !important;
+  }
+  .banner-three-title {
+    font-size: clamp(1.8rem, 9vw, 2.8rem) !important;
+  }
+  .banner-three-left-title {
+    font-size: 1rem !important;
   }
 }
 
