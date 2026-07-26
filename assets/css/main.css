@@ -10119,46 +10119,57 @@ body.tw-magic-cursor #magic-cursor {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    position: relative !important;
   }
   .banner-three-title {
     order: 1 !important;
     font-size: clamp(2.6rem, 12vw, 5.5rem) !important;
     line-height: 1.05 !important;
     margin-bottom: 15px !important;
-    text-align: center;
+    text-align: center !important;
     word-break: break-word;
     position: relative !important;
-    z-index: 1 !important;
+    z-index: 2 !important;
   }
   .banner-three-man {
     order: 2 !important;
-    position: relative !important;
-    top: 0 !important;
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
     left: auto !important;
+    right: auto !important;
     transform: none !important;
-    width: 96vw !important;
-    max-width: 540px !important;
-    margin: 10px auto 25px auto !important;
-    z-index: 1 !important;
-    text-align: center;
+    width: 100% !important;
+    max-width: 480px !important;
+    height: auto !important;
+    margin: 15px auto 25px auto !important;
+    z-index: 2 !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
   .banner-three-man img {
-    transform: scale(1.05) !important;
-    transform-origin: center center !important;
-    max-height: 520px !important;
-    width: 100% !important;
+    position: relative !important;
+    z-index: 2 !important;
+    transform: none !important;
+    max-height: 480px !important;
+    width: auto !important;
+    max-width: 100% !important;
     object-fit: contain !important;
-    margin: 0 auto;
-    display: block;
+    margin: 0 auto !important;
+    display: block !important;
   }
   .banner-three-wrap {
     order: 3 !important;
+    position: relative !important;
+    z-index: 2 !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     width: 100% !important;
     gap: 25px !important;
-    margin-top: 10px !important;
+    margin-top: 0 !important;
   }
   .banner-three-left {
     order: 1 !important;
@@ -10437,13 +10448,13 @@ body.tw-magic-cursor #magic-cursor {
     padding-block: 70px 25px !important;
   }
   .banner-three-man {
-    width: 98vw !important;
-    max-width: 460px !important;
-    margin: 5px auto 20px auto !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 10px auto 20px auto !important;
   }
   .banner-three-man img {
-    max-height: 440px !important;
-    transform: scale(1.05) !important;
+    max-height: 400px !important;
+    transform: none !important;
   }
   .banner-three-title {
     font-size: clamp(2.2rem, 11vw, 3.8rem) !important;
@@ -10461,13 +10472,13 @@ body.tw-magic-cursor #magic-cursor {
 
 @media screen and (max-width: 375px) {
   .banner-three-man {
-    width: 100vw !important;
-    max-width: 380px !important;
-    margin: 5px auto 15px auto !important;
+    width: 100% !important;
+    max-width: 330px !important;
+    margin: 8px auto 15px auto !important;
   }
   .banner-three-man img {
-    max-height: 380px !important;
-    transform: scale(1) !important;
+    max-height: 340px !important;
+    transform: none !important;
   }
   .banner-three-title {
     font-size: clamp(1.9rem, 10vw, 3rem) !important;
