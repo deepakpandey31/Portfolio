@@ -1,6 +1,10 @@
 # Deepak Pandey — Personal Portfolio 🚀
 
+[![Live Website](https://img.shields.io/badge/Live_Portfolio-dp--portfolio--umber.vercel.app-ED5A2F?style=for-the-badge&logo=vercel&logoColor=white)](https://dp-portfolio-umber.vercel.app/)
+
 Hi there! 👋 Welcome to my personal portfolio repository. I am a B.Tech Computer Science student at Dr. Ambedkar Institute of Technology for Divyangjan (AITD), Kanpur (AKTU), passionate about software engineering, problem-solving, and building applications that make a real-world impact.
+
+🌐 **Live Deployed Portfolio**: [https://dp-portfolio-umber.vercel.app/](https://dp-portfolio-umber.vercel.app/)
 
 ---
 
@@ -58,15 +62,15 @@ Hi there! 👋 Welcome to my personal portfolio repository. I am a B.Tech Comput
 
 ```bash
 # Clone the repository
-git clone https://github.com/deepakpandey31/portfolio.git
+git clone https://github.com/deepakpandey31/Portfolio.git
 
 # Navigate into the directory
-cd portfolio
+cd Portfolio
 
 # Start a local HTTP server
 python -m http.server 5500
 ```
-Open `http://localhost:5500` in your browser.
+Open `http://localhost:5500` or view live at **[dp-portfolio-umber.vercel.app](https://dp-portfolio-umber.vercel.app/)**.
 
 ---
 
