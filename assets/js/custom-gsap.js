@@ -685,21 +685,34 @@
   $(document).on("submit", "#portfolio-contact-form", function (e) {
     e.preventDefault();
     
-    var msg = $("#contact-message").val().trim();
+    var name = $("#contact-name").val() ? $("#contact-name").val().trim() : "";
+    var email = $("#contact-email").val() ? $("#contact-email").val().trim() : "";
+    var msg = $("#contact-message").val() ? $("#contact-message").val().trim() : "";
     
     var myEmail = "pandeydeepak312005@gmail.com";
-    var subject = encodeURIComponent("want to connect");
-    var body = encodeURIComponent(msg);
+    var subjectStr = "Portfolio Contact: " + (name ? "Message from " + name : "New Message");
     
-    // Construct Web Gmail compose URL (opens in new tab)
-    var gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=" + myEmail + "&su=" + subject + "&body=" + body;
+    var bodyLines = [];
+    if (name) bodyLines.push("Name: " + name);
+    if (email) bodyLines.push("Sender Email: " + email);
+    if (msg) bodyLines.push("\nMessage:\n" + msg);
+    var bodyStr = bodyLines.join("\n");
+    
+    var subject = encodeURIComponent(subjectStr);
+    var body = encodeURIComponent(bodyStr);
+    
     var mailtoUrl = "mailto:" + myEmail + "?subject=" + subject + "&body=" + body;
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 991;
     
-    // Open Web Gmail compose window
-    window.open(gmailUrl, "_blank");
-    
-    // Trigger native mailto link
-    setTimeout(function() {
+    if (isMobile) {
+      // On mobile devices, redirect directly to Gmail App / native email app
       window.location.href = mailtoUrl;
-    }, 300);
+    } else {
+      // On desktop devices, open Web Gmail in new tab and trigger mailto
+      var gmailWebUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=" + myEmail + "&su=" + subject + "&body=" + body;
+      window.open(gmailWebUrl, "_blank");
+      setTimeout(function() {
+        window.location.href = mailtoUrl;
+      }, 300);
+    }
   });
